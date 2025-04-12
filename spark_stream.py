@@ -72,6 +72,7 @@ def create_spark_connection():
             .appName('SparkDataStreaming') \
             .config('spark.jars.packages', "com.datastax.spark:spark-cassandra-connector_2.12:3.5.0,"
                                         #    "org.apache.kafka:kafka-clients:3.5.0,"
+                                            "com.google.guava:guava:30.1-jre,"
                                            "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0") \
             .config('spark.cassandra.connection.host', 'localhost') \
             .getOrCreate()
